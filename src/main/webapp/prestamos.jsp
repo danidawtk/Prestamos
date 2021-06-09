@@ -84,15 +84,15 @@
                 <input type="submit" value="Calcular">
                 <h1>ImporteTotalPrestamo: ${miPrestamo.importePrestamo}</h1> 
                 <% if(genereListaCuotas!=null){
-                    out.print("<table style='border:2px solid blue'>");
-                    for( Cuota v:genereListaCuotas){
-                        out.print("<tr>"
+                    out.print("<table style='border:2px solid blue'>"
+                               +"<tr>"
                             +   "<td>NºCuota</td>"
                             +   "<td>Importe</td>"
                             +   "<td>Capital</td>"
                             +   "<td>Interes</td>"
-                            + "</tr>"
-                            +"<tr>"
+                            + "</tr>");
+                    for( Cuota v:genereListaCuotas){
+                        out.print("<tr>"
                                 + "<td>"+v.getNumeroCuota()+"</td>"
                                 + "<td>"+v.getImporteCuota()+"</td>"
                                 + "<td>"+v.getCapital()+"</td>"
